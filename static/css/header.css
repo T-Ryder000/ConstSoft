@@ -1,0 +1,160 @@
+.container_header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #02006d;
+  transition: all 0.2s;
+  width: 100%;
+  z-index: 100;
+  border-bottom: 1px solid #f7bb27;
+}
+
+.container_scroll-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #02006d;
+  position: fixed;
+  top: 0;
+  width: 80%;
+  border-radius: 40px;
+  margin: 25px auto 0;
+  z-index: 100;
+  transition: all 0.2s;
+  border-bottom: 1px solid #f7bb27;
+}
+
+.container_nav-header {
+  display: flex;
+  align-items: center;
+}
+
+.container_ul-header {
+  display: flex;
+  gap: 2em;
+  margin: auto 0;
+}
+
+.name_img-header {
+  width: 151px;
+}
+
+.logo_img-header {
+  width: 51px;
+}
+
+.li-header {
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.li-header:hover {
+  color: #f7bb27;
+  transition: all 0.2s;
+}
+
+.texto-com-hover {
+  position: relative;
+  display: inline-block;
+}
+
+.texto-com-hover .linha {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f7bb27;
+  transition: width 0.3s ease;
+}
+
+.texto-com-hover:hover .linha {
+  width: 100%;
+}
+
+.container_menu-header-mobile {
+  position: absolute;
+  width: 100%;
+}
+
+.container_nav-header-mobile {
+  display: none;
+  width: 100%;
+  max-height: 100%;
+  z-index: 10;
+}
+
+.menu-header-mobile {
+  padding: 1em;
+  border-radius: 0 0 24px 24px;
+  background-color: #02006d;
+  width: 100%;
+}
+
+.li_dropdown-header {
+  color: white !important;
+  font-size: 24px;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.btn_dropdown-header {
+  color: white !important;
+  border-radius: 24px !important;
+}
+
+.li_dropdown-header:hover {
+  color: #f7bb27 !important;
+}
+
+@media screen and (max-width: 750px) {
+  .container_header,
+  .container_scroll-header {
+    justify-content: center;
+    gap: 0;
+  }
+
+  .container_scroll-header {
+    border-radius: 15px;
+  }
+
+  .container_nav-header {
+    display: none;
+  }
+
+  .container_nav-header-mobile {
+    display: block;
+    width: 25%;
+    border-radius: 40px 0 0 0;
+    padding-top: 12px;
+  }
+
+  .container_name-header {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container_logo-header {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu-header-mobile {
+    border-bottom: 1px solid #f7bb27;
+  }
+
+  .name_img-header {
+    padding: 5px;
+  }
+
+  .logo_img-header {
+    width: 41px;
+    padding: 3px;
+  }
+}

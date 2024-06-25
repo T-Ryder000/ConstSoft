@@ -1,0 +1,28 @@
+.social-medias{
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  position: fixed;
+  top: calc(100%/2);
+  right: calc(0% + 2% );
+  z-index: 10;
+}
+
+.social-link{
+  width: 45px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.social-link:active{
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+
+.social-link > img{
+  width: 100%;
+}
+
+.social-link > img:hover{
+  opacity: 0.5;
+}

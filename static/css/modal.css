@@ -1,0 +1,13 @@
+.modal_form{
+  background-color: #f7bb27 !important;
+  color: white !important;
+}
+
+.container_logo-modal{
+  display: flex;
+  justify-content: end;
+}
+
+.logo_img-modal{
+  width: 51px;
+}

@@ -1,0 +1,61 @@
+.container_economia{
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+  padding-top: 2em;
+}
+.container_text-economia{
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  width: 90%; 
+}
+.container_text-economia > p{
+  width: 60%;
+}
+
+
+.container_img-economia {
+  height: 300px;
+  width: 90%; /* Adiciona largura total para responsividade */
+  overflow: hidden; /* Garante que as imagens não transbordem */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #f7bb27; */
+  border-radius: 50% 50% 0 0;
+}
+
+.container_img-economia > img {
+  height: 100%; /* Ajusta a imagem para ocupar toda a altura do contêiner */
+  /* width: 100%; Ajusta a imagem para ocupar toda a largura do contêiner */
+  object-fit: cover; /* Mantém a proporção da imagem */
+  image-rendering: -webkit-optimize-contrast; /* Otimiza a renderização da imagem */
+  image-rendering: crisp-edges; /* Mantém as bordas nítidas */
+  z-index: 5;
+}
+
+.link_text-economia{
+  color: #f7bb27 !important;
+}
+
+@media (max-width: 768px) {
+  .container_img-economia {
+    height: auto; /* Ajusta a altura para se adequar ao conteúdo */
+  }
+  .container_img-economia > img {
+    height: auto;
+  }
+
+  .container_text-economia > p{
+    width: 100%;
+  }
+}
