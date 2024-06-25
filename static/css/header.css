@@ -6,7 +6,7 @@
   transition: all 0.2s;
   width: 100%;
   z-index: 100;
-  border-bottom: 1px solid #f7bb27;
+  border-bottom: 4px solid #f7bb27;
 }
 
 .container_scroll-header {
@@ -21,7 +21,7 @@
   margin: 25px auto 0;
   z-index: 100;
   transition: all 0.2s;
-  border-bottom: 1px solid #f7bb27;
+  border-bottom: 4px solid #f7bb27;
 }
 
 .container_nav-header {
@@ -41,6 +41,7 @@
 
 .logo_img-header {
   width: 51px;
+  padding: 5px;
 }
 
 .li-header {
