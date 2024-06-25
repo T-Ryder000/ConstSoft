@@ -8,6 +8,7 @@
       name="keywords"
       content="ConstSoft, ConstSoft desevolvedora de soluções, ConstSoft desenvolvedora de sistemas, ecommerce barato, software house ConstSoft"
     />
+    <link rel="icon" href="../static/images/icon.png">
     <link rel="stylesheet" href="../static/css/style.css" />
     <link
       rel="stylesheet"
@@ -619,7 +620,7 @@
                       name="email"
                       placeholder="Digite seu e-mail"
                       class="input-text border-gray-300 rounded-md w-full py-2 px-3 focus:outline-none focus:ring focus:border-blue-500"
-                      requi#f7bb27
+                      required
                     />
                   </div>
                   <div class="mb-4">
@@ -632,7 +633,7 @@
                       name="number"
                       placeholder="Digite seu numero"
                       class="input-text border-gray-300 rounded-md w-full py-2 px-3 focus:outline-none focus:ring focus:border-blue-500"
-                      requi#f7bb27
+                      required
                     />
                   </div>
                   <div class="mb-4">
@@ -645,7 +646,7 @@
                       rows="4"
                       placeholder="Digite sua mensagem"
                       class="input-text border-gray-300 rounded-md w-full py-2 px-3 focus:outline-none focus:ring focus:border-blue-500"
-                      requi#f7bb27
+                      required
                     ></textarea>
                   </div>
                   <button
@@ -799,46 +800,49 @@
     <script type="module" src="../static/js/script.js"></script>
     <script>
       function submitForm() {
-        let emailInput = document.getElementById('email')
-        let phoneInput = document.getElementById('number')
-        let textInput = document.getElementById('message')
-
-        let form = document.querySelector('#form')
-        let formData = new FormData(form)
-
-        let closeModal = document.getElementById('close_modal')
-
+        let emailInput = document.getElementById('email');
+        let phoneInput = document.getElementById('number');
+        let textInput = document.getElementById('message');
+    
+        let form = document.querySelector('#form');
+        let formData = new FormData(form);
+    
+        let closeModal = document.getElementById('close_modal');
+        let submitButton = document.getElementById('submitButton');
+        submitButton.disabled = true; // Desativa o botão de envio
+    
         closeModal.addEventListener('click', function () {
-          submitButton.removeAttribute('data-bs-toggle', 'modal')
-          submitButton.removeAttribute('data-bs-target', '#exampleModal')
-        })
-
+          submitButton.removeAttribute('data-bs-toggle', 'modal');
+          submitButton.removeAttribute('data-bs-target', '#exampleModal');
+        });
+    
         fetch('/submit_form', {
           method: 'POST',
           body: formData
         })
-          .then(response => response.text())
+          .then(response => response.json())
           .then(result => {
-            emailInput.value = ''
-            textInput.value = ''
-            phoneInput.value = ''
+            emailInput.value = '';
+            textInput.value = '';
+            phoneInput.value = '';
+            submitButton.disabled = false; // Reativa o botão de envio
             if (result) {
-              let submitButton = document.getElementById('submitButton')
-              submitButton.setAttribute('data-bs-toggle', 'modal')
-              submitButton.setAttribute('data-bs-target', '#exampleModal')
-
-              submitButton.click()
+              submitButton.setAttribute('data-bs-toggle', 'modal');
+              submitButton.setAttribute('data-bs-target', '#exampleModal');
+              submitButton.click();
             } else {
-              console.error('Erro na resposta:', result)
+              console.error('Erro na resposta:', result);
             }
           })
           .catch(error => {
-            console.error('Erro ao enviar formulário:', error)
-          })
-
-        return false
+            submitButton.disabled = false; // Reativa o botão de envio em caso de erro
+            console.error('Erro ao enviar formulário:', error);
+          });
+    
+        return false;
       }
     </script>
+    
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

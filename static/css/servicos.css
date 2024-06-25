@@ -13,6 +13,11 @@
   color: black;
 }
 
+.p_servicos{
+  font-weight: bold;
+  text-align: center;
+}
+
 .subContainer_servicos{
   margin: 50px 0 0;
   width: 100% !important;
