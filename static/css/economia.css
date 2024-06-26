@@ -29,9 +29,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   /* background-color: #f7bb27; */
   border-radius: 50% 50% 0 0;
+  /* background-color:#02006d; */
 }
 
 .container_img-economia > img {

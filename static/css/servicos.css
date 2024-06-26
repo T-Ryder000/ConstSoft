@@ -1,7 +1,7 @@
 
 .container_servicos{
   /* padding: 70px 0 40px; */
-  background-color: black;
+  background-color: #000810;
   color: #fff;
   padding: 50px;
 }
@@ -9,7 +9,7 @@
 .title_services, .p_servicos{
   background-color: #f7bb27;
   padding: 0.5em;
-  border-radius: 24px;
+  /* border-radius: 24px; */
   color: black;
 }
 
