@@ -24,7 +24,7 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(../images/fundoSob.jpg);
+  background-image: url(../images/fundoSob.svg);
   background-size: cover;
 
 }

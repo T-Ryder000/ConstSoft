@@ -16,19 +16,6 @@ window.addEventListener("scroll", function(){
 
 })
 
-// window.addEventListener("scroll", function(){
-//   let scrollTop = this.window.scrollY;
-
-//   let header = this.document.querySelector('.container_scroll-header');
-
-//   if(scrollTop > 400){
-//     header.style.position = "fixed";
-//   }else{
-//     header.style.position = "sticky";
-//   }
-
-// })
-
   
 }
 

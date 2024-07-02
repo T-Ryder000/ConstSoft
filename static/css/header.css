@@ -1,4 +1,6 @@
-.container_header {
+/* Estilos comuns */
+.container_header,
+.container_scroll-header {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -10,29 +12,27 @@
 }
 
 .container_scroll-header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #02006d;
   position: fixed;
   top: 0;
   width: 80%;
   border-radius: 40px;
   margin: 25px auto 0;
-  z-index: 100;
-  transition: all 0.2s;
-  border-bottom: 4px solid #f7bb27;
 }
 
-.container_nav-header {
+.container_nav-header,
+.container_ul-header {
   display: flex;
   align-items: center;
 }
 
 .container_ul-header {
-  display: flex;
   gap: 2em;
   margin: auto 0;
+}
+
+.name_img-header,
+.logo_img-header {
+  transition: all 0.2s;
 }
 
 .name_img-header {
@@ -53,7 +53,6 @@
 
 .li-header:hover {
   color: #f7bb27;
-  transition: all 0.2s;
 }
 
 .texto-com-hover {
@@ -92,6 +91,7 @@
   border-radius: 0 0 24px 24px;
   background-color: #02006d;
   width: 100%;
+  border-bottom: 1px solid #f7bb27;
 }
 
 .li_dropdown-header {
@@ -144,10 +144,6 @@
     width: 25%;
     display: flex;
     justify-content: center;
-  }
-
-  .menu-header-mobile {
-    border-bottom: 1px solid #f7bb27;
   }
 
   .name_img-header {
