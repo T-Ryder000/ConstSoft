@@ -109,4 +109,8 @@
   .ul-contact {
     width: 100%;
   }
+
+  .container-logo-footer {
+    width: calc(100%/1);
+  }
 }  

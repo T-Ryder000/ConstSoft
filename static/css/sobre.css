@@ -2,7 +2,7 @@
 :root {
   --main-bg-color: black;
   --main-bg-img: url(../images/fundoSob.svg);
-  --main-bg-img-mobile: url(../images/fundoSob.jpg);
+  --main-bg-img-mobile: url(../images/fundoSob.svg);
   --highlight-color: #f7bb27;
   --shadow-color: rgba(0, 7, 66, 0.726);
   --white-color: white;
@@ -47,6 +47,7 @@
   padding: 2em;
   gap: 0.5em;
   color: var(--white-color);
+  transition: none !important;
 }
 
 .subContainer_sobre {
