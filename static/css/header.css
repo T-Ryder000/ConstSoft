@@ -14,17 +14,17 @@
 }
 
 .container_scroll-header {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 5px;
   width: 80%;
   border-radius: 40px;
-  margin: 25px auto 0;
-
+  margin: 0 auto 0;
 }
 
 .p-header-mobile{
   margin-bottom: 0 !important;
 }
+
 
 .container_nav-header,
 .container_ul-header {
